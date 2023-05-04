@@ -1,3 +1,19 @@
+<script lang="ts" setup>
+  import { Message, User } from '../types';
+  defineProps<{
+    messages: Message[]
+    users: User[]
+    me: User
+    usersTyping?: User[]
+  }>()
+
+  const isOpen = ref(false)
+</script>
+
 <template>
-  <!-- Code out the chatbox for Exercise 1 here -->
+  <div class="fixed bottom right">
+    <button>
+      <IronChat />
+    </button>
+  </div>
 </template>
